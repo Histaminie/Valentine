@@ -61,14 +61,14 @@ button:hover {
     transform: scale(1.05);
 }
 .castle-image {
-    width: 220px;
-    max-width: 70%;
-    margin: 20px auto 25px;
+    width: 200px;
+    max-width: 80%;
+    margin: 18px auto 22px;
     display: block;
-    border-radius: 12px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-    opacity: 0.95;
+    border-radius: 14px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -82,4 +82,13 @@ button:hover {
 
 .castle-image {
     animation: fadeInUp 1.2s ease-out;
+}
+@keyframes softGlow {
+    0% { box-shadow: 0 18px 35px rgba(255, 255, 255, 0.15); }
+    50% { box-shadow: 0 22px 50px rgba(255, 255, 255, 0.35); }
+    100% { box-shadow: 0 18px 35px rgba(255, 255, 255, 0.15); }
+}
+
+.castle-image {
+    animation: softGlow 4s ease-in-out infinite;
 }
