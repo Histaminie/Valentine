@@ -6,14 +6,14 @@
     font-family: 'Georgia', serif;
 }
 
-/* ===== PAGE LAYOUT (MOBILE-SAFE) ===== */
+/* ===== BODY (MOBILE-SAFE CENTERING) ===== */
 body {
     background: linear-gradient(to right, #ff758c, #ff7eb3);
     min-height: 100svh; /* correct mobile viewport */
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 24px 16px;
+    align-items: center;
+    padding: 20px 16px;
     color: white;
     overflow-x: hidden;
 }
@@ -23,18 +23,17 @@ body {
     width: 100%;
     max-width: 380px;
     background: rgba(0, 0, 0, 0.28);
-    padding: 28px 22px 30px;
+    padding: 26px 22px 28px;
     border-radius: 22px;
     text-align: center;
-    margin-top: 40px;
     position: relative;
     z-index: 1;
 }
 
-/* ===== HEADINGS ===== */
+/* ===== HEADING ===== */
 h1 {
-    font-size: 1.7rem;
-    margin-bottom: 14px;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
 }
 
 /* ===== CASTLE IMAGE ===== */
@@ -42,28 +41,31 @@ h1 {
     width: 100%;
     max-width: 220px;
     height: auto;
-    margin: 18px auto 20px;
+    margin: 16px auto 18px;
     display: block;
     border-radius: 14px;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
 }
 
-/* ===== TEXT ===== */
+/* ===== TEXT (RESERVED SPACE FOR TYPING) ===== */
+.subtitle,
+.question {
+    color: white;
+    min-height: 2.4em; /* prevents clipping during typing */
+}
+
 .subtitle {
     font-size: 1.05rem;
     line-height: 1.45;
-    margin-bottom: 10px;
-    color: white;
+    margin-bottom: 6px;
 }
 
 .question {
     font-size: 1.2rem;
-    margin-top: 6px;
-    margin-bottom: 20px;
-    color: white;
+    margin-bottom: 18px;
 }
 
-/* ===== STORY TEXT (PAGE 1+) ===== */
+/* ===== STORY TEXT (OTHER PAGES) ===== */
 .story-text {
     font-size: 1.1rem;
     margin-bottom: 14px;
@@ -126,21 +128,21 @@ button:hover {
     position: absolute;
     bottom: -10%;
     font-size: 1.2rem;
-    opacity: 0.5;
+    opacity: 0.45;
     animation: floatUp 8s linear infinite;
 }
 
-/* Random positions */
-.floating-container span:nth-child(1) { left: 5%;  animation-delay: 0s;  }
-.floating-container span:nth-child(2) { left: 15%; animation-delay: 1s;  }
-.floating-container span:nth-child(3) { left: 25%; animation-delay: 2s;  }
-.floating-container span:nth-child(4) { left: 35%; animation-delay: 0.5s;}
-.floating-container span:nth-child(5) { left: 45%; animation-delay: 1.5s;}
-.floating-container span:nth-child(6) { left: 55%; animation-delay: 0s;  }
-.floating-container span:nth-child(7) { left: 65%; animation-delay: 2.5s;}
-.floating-container span:nth-child(8) { left: 75%; animation-delay: 1s;  }
-.floating-container span:nth-child(9) { left: 85%; animation-delay: 2s;  }
-.floating-container span:nth-child(10){ left: 95%; animation-delay: 0.8s;}
+/* Positions */
+.floating-container span:nth-child(1)  { left: 5%;  animation-delay: 0s; }
+.floating-container span:nth-child(2)  { left: 15%; animation-delay: 1s; }
+.floating-container span:nth-child(3)  { left: 25%; animation-delay: 2s; }
+.floating-container span:nth-child(4)  { left: 35%; animation-delay: 0.5s; }
+.floating-container span:nth-child(5)  { left: 45%; animation-delay: 1.5s; }
+.floating-container span:nth-child(6)  { left: 55%; animation-delay: 0s; }
+.floating-container span:nth-child(7)  { left: 65%; animation-delay: 2.5s; }
+.floating-container span:nth-child(8)  { left: 75%; animation-delay: 1s; }
+.floating-container span:nth-child(9)  { left: 85%; animation-delay: 2s; }
+.floating-container span:nth-child(10) { left: 95%; animation-delay: 0.8s; }
 
 @keyframes floatUp {
     from {
@@ -148,7 +150,7 @@ button:hover {
         opacity: 0;
     }
     20% {
-        opacity: 0.5;
+        opacity: 0.45;
     }
     to {
         transform: translateY(-120vh) translateX(-40px) scale(1.2);
