@@ -37,3 +37,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     typeSubtitle();
 });
+const runawayBtn = document.getElementById("runawayBtn");
+
+if (runawayBtn) {
+    let direction = 1;
+
+    const bounceButton = () => {
+        const x = direction * (40 + Math.random() * 30);
+        const y = -20 - Math.random() * 20;
+
+        runawayBtn.style.transform = `translate(${x}px, ${y}px)`;
+
+        direction *= -1; // alternate left / right
+    };
+
+    // Desktop hover
+    runawayBtn.addEventListener("mouseenter", bounceButton);
+
+    // Mobile tap
+    runawayBtn.addEventListener("touchstart", bounceButton);
+}
