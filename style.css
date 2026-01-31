@@ -167,3 +167,7 @@ h1 {
     position: relative;
     z-index: 1;
 }
+.runaway {
+    position: relative;
+    transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
