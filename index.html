@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <title>Welcome Traveller</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
+
 <body>
+
+<!-- Floating hearts / stars -->
+<div class="floating-container">
+    <span>💖</span>
+    <span>✨</span>
+    <span>💗</span>
+    <span>⭐</span>
+    <span>💫</span>
+</div>
+
 <div class="container">
     <h1>Welcome, Traveller 🌍</h1>
 
-<img src="assets/castle.png" alt="Castle at the destination" class="castle-image">
+    <!-- Castle image -->
+    <img src="assets/castle.png" alt="Castle at the destination" class="castle-image">
 
-<p class="subtitle">
-Every journey that matters<br>
-begins with a single question.
-</p>
+    <!-- Typing animation targets -->
+    <p class="subtitle" id="subtitle"></p>
+    <p class="question" id="question"></p>
 
-<p class="question">
-Are you ready to begin yours?
-</p>
+    <div class="buttons">
+        <button class="yes" onclick="window.location.href='page1.html'">
+            Yes, let’s go
+        </button>
 
-<div class="buttons">
-    <button class="yes" onclick="window.location.href='page1.html'">
-        Yes, let’s go
-    </button>
-
-    <button class="no" onclick="notReady()">
-        Not yet
-    </button>
+        <button class="no" onclick="notReady()">
+            Not yet
+        </button>
+    </div>
 </div>
 
 </body>
